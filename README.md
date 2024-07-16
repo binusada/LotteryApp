@@ -5,13 +5,13 @@ The Lottery App reads lottery draw details from a JSON file (added to the projec
 Few UI enhancement 
 1. Show price money in millions and billions instead of long numbers on screen
 2. Show time in a friendly format (like yesterday, today, in 2 hours, etc.)
-3. Show single-digit draws in two-digit format (like 2 becomes 02)
+3. Show single-digit draws in two-digit format (2 becomes 02)
 4. Show celebration Lottie animations on the detailed screen
 5. All UI elements are built as components for reusability and have checks in place for undesired use
 
 ```mermaid
 graph LR
-A[ListView] -- onClick --> B[DetailsView]
+A[ListView] -- onClick --> B[DetailView]
 B -- onBackPress --> A
 ```
 
