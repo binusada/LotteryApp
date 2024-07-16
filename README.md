@@ -1,6 +1,6 @@
 # Welcome to Lottery APP!
 
-The Lottery App reads lottery draw details from a JSON file (which was added to the project's assets folder) and displays them as a list on the home screen. When you click on individual draws, the app shows a detailed view of the draw. 
+The Lottery App reads lottery draw details from a JSON file (added to the project's assets folder) and displays them as a list on the home screen. When you click on individual draws, the app shows a detailed view of the draw. 
 
 Few UI enhancement 
 1. Show price money in millions and billions instead of long numbers on screen
@@ -9,6 +9,11 @@ Few UI enhancement
 4. Show celebration Lottie animations on the detailed screen
 5. All UI elements are built as components for reusability and have checks in place for undesired use
 
+```mermaid
+graph LR
+A[ListView] -- onClick --> B[DetailsView]
+B -- onBackPress --> A
+```
 
 ## Checklist of Features done 
 
@@ -22,3 +27,11 @@ Few UI enhancement
 -  **[NotDone]** Interactive Navigation: Implement swipe gestures to navigate between different draw details.
 -  **[NotDone]** Local Storage: Cache the lottery draws locally and allow the app to display the cached data when offline.
 -  **[Done]** UI/UX Enhancements: Enhance the visual presentation and user experience of the app using animations or custom UI components.
+
+## List Screen 
+
+![Screenshot_20240716_073656 =50x10](https://github.com/user-attachments/assets/c72a9adc-a447-4bc6-b8a0-b340a88390b3)  
+
+## Details Screen
+![Screenshot_20240716_073737](https://github.com/user-attachments/assets/ce7fc8de-21b7-4e72-9e81-8637afc8a096)
+
