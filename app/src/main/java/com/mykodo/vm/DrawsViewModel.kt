@@ -31,6 +31,7 @@ class DrawsViewModel @Inject constructor(
                 val draws = jsonHelper.parseJsonToModel(it)
                 _uiState.value = DrawsUIState(draws = draws)
             }
+            //todo handle error
         }
     }
 }

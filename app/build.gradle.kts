@@ -1,6 +1,3 @@
-import com.android.build.api.dsl.Packaging
-import org.jetbrains.kotlin.com.intellij.openapi.extensions.ExtensionDescriptor
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -72,18 +69,25 @@ dependencies {
     implementation(libs.androidx.compose.materialWindow)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.androidx.lifecycle.runtime.compose.android)
     implementation(libs.hilt.android)
     implementation(libs.hilt.compiler)
-    implementation("com.airbnb.android:lottie-compose:6.0.0")
-    implementation("com.google.code.gson:gson:2.8.8")
-    implementation(libs.androidx.lifecycle.runtime.compose.android)
+    implementation(libs.gson)
+    implementation(libs.lottie.compose)
     kapt(libs.hilt.compiler)
 
     testImplementation(libs.junit)
+    testImplementation(libs.androidx.test.core)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.mokito.core)
+    testImplementation(libs.mokito.kotlin)
+    testImplementation(libs.mockk)
+
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
